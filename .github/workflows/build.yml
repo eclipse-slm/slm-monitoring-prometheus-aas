@@ -22,10 +22,6 @@ jobs:
           distribution: 'temurin'
       - name: Run the Maven verify phase
         run: mvn --batch-mode --update-snapshots verify
-
-      - name: Test
-        run: ls -l
-
       - name: Build docker image
         working-directory: ./
         run: $DOCKER_COMMAND image build . --no-cache -t ghcr.io/eclipse-slm/slm-monitoring-prometheus-aas:0.0.1-SNAPSHOT
