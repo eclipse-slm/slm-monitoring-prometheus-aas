@@ -16,9 +16,6 @@
 		<maven.plugin.dockerfile.version>1.4.10</maven.plugin.dockerfile.version>
 		<maven.plugin.spring.boot.version>${spring.boot.version}</maven.plugin.spring.boot.version>
 
-		<docker.image.name>fabos-monitoring-prometheus-aas</docker.image.name>
-		<docker.image.registry>fabos4ai</docker.image.registry>
-		<docker.image.skip>false</docker.image.skip>
 
 		<spring.boot.version>2.7.4</spring.boot.version>
 
@@ -63,43 +60,6 @@
 						</execution>
 					</executions>
 				</plugin>
-				<!-- Docker Image !-->
-				<plugin>
-					<groupId>com.spotify</groupId>
-					<artifactId>dockerfile-maven-plugin</artifactId>
-					<version>${maven.plugin.dockerfile.version}</version>
-					<executions>
-						<execution>
-							<id>build-image</id>
-							<goals>
-								<goal>build</goal>
-							</goals>
-						</execution>
-						<execution>
-							<id>push-image</id>
-							<phase>deploy</phase>
-							<goals>
-								<goal>push</goal>
-							</goals>
-						</execution>
-					</executions>
-					<configuration>
-						<useMavenSettingsForAuth>true</useMavenSettingsForAuth>
-						<repository>${docker.image.registry}/${docker.image.name}</repository>
-						<tag>${project.version}</tag>
-						<dockerfile>Dockerfile</dockerfile>
-						<contextDirectory>.</contextDirectory>
-						<skipDockerInfo>true</skipDockerInfo>
-						<skip>${docker.image.skip}</skip>
-					</configuration>
-					<dependencies>
-						<dependency>
-							<groupId>javax.activation</groupId>
-							<artifactId>javax.activation-api</artifactId>
-							<version>1.2.0</version>
-						</dependency>
-					</dependencies>
-				</plugin>
 			</plugins>
 		</pluginManagement>
 		<plugins>
@@ -123,11 +83,7 @@
 					<mainClass>de.fhg.ipa.ced.resource_registry.de.fhg.ipa.ced.service_registry.service.rest.Application</mainClass>
 				</configuration>
 			</plugin>
-			<!-- Docker Image !-->
-			<plugin>
-				<groupId>com.spotify</groupId>
-				<artifactId>dockerfile-maven-plugin</artifactId>
-			</plugin>
+
 		</plugins>
 	</build>
 
