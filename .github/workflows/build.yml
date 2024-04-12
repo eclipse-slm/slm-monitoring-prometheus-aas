@@ -19,6 +19,7 @@ jobs:
       - uses: actions/setup-java@v4
         with:
           java-version: '18'
+          distribution: 'temurin'
       - name: Run the Maven verify phase
         run: mvn verify
       - uses: actions/checkout@v3
