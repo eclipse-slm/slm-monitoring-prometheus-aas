@@ -23,9 +23,13 @@ jobs:
       - name: Run the Maven verify phase
         run: mvn verify
       - uses: actions/checkout@v3
+
+      - name: Test
+        run: ls -l
+
       - name: Build docker image
         working-directory: ./
-        run: $DOCKER_COMMAND image build ./ --no-cache -t ghcr.io/eclipse-slm/slm-monitoring-prometheus-aas:0.0.1-SNAPSHOT
+        run: $DOCKER_COMMAND image build . --no-cache -t ghcr.io/eclipse-slm/slm-monitoring-prometheus-aas:0.0.1-SNAPSHOT
       - name: Login to Docker Registry
         uses: docker/login-action@v2
         with:
