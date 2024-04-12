@@ -1,1 +1,1 @@
-# slm-monitoring-prometheus-aas
+# fabos-monitoring-prometheus-aas
