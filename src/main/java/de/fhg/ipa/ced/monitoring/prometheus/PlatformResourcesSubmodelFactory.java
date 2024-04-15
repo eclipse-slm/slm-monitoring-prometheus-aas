@@ -31,7 +31,7 @@ public class PlatformResourcesSubmodelFactory {
         RestTemplate restTemplate = new RestTemplate();
         URI queryUrl;
         try {
-            queryUrl = new URI("http", null, prometheusHost, prometheusPort, "/api/v1/query", "query={slm_id=\""+id+"\"}", null);
+            queryUrl = new URI("http", null, prometheusHost, prometheusPort, "/api/v1/query", "query={resource_id=\""+id+"\"}", null);
         } catch (URISyntaxException e) {
             throw new RuntimeException(e);
         }
@@ -52,7 +52,7 @@ public class PlatformResourcesSubmodelFactory {
             }
         }
         try {
-            queryUrl = new URI("http", null, prometheusHost, prometheusPort, "/api/v1/query", "query=node_memory_MemAvailable_bytes{slm_id=\""+id+"\"}[1m]", null);
+            queryUrl = new URI("http", null, prometheusHost, prometheusPort, "/api/v1/query", "query=node_memory_MemAvailable_bytes{resource_id=\""+id+"\"}[1m]", null);
         } catch (URISyntaxException e) {
             throw new RuntimeException(e);
         }
@@ -69,7 +69,7 @@ public class PlatformResourcesSubmodelFactory {
         }
 
         try {
-            queryUrl = new URI("http", null, prometheusHost, prometheusPort, "/api/v1/query", "query=(100-(avg(irate(node_cpu_seconds_total{mode=\"idle\", slm_id=\""+id+"\"}[1m]))*100))[1m:1s]", null);
+            queryUrl = new URI("http", null, prometheusHost, prometheusPort, "/api/v1/query", "query=(100-(avg(irate(node_cpu_seconds_total{mode=\"idle\", resource_id=\""+id+"\"}[1m]))*100))[1m:1s]", null);
         } catch (URISyntaxException e) {
             throw new RuntimeException(e);
         }
