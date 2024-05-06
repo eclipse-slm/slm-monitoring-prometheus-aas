@@ -2,17 +2,15 @@ version: '3'
 
 services:
   monitoring:
-    image: fabos4ai/slm-monitoring-prometheus:0.0.1-SNAPSHOT
+    image: ghcr.io/eclipse-slm/slm-monitoring-prometheus-aas:1.0.0-SNAPSHOT
     ports:
       - "8080:8080"
 
   prometheus:
-    image: prom/prometheus
+    image: ghcr.io/eclipse-slm/monitoring-prometheus:v2.43.0
     networks:
       default:
         aliases:
           - prometheus
     ports:
       - "9090:9090"
-    volumes:
-      - ./prometheus.yml:/etc/prometheus/prometheus.yml

@@ -8,7 +8,7 @@ on:
 env:
   DOCKER_COMMAND: docker
   IMAGE_NAME: ghcr.io/eclipse-slm/slm-monitoring-prometheus-aas
-  VERSION: 0.0.1-SNAPSHOT
+  VERSION: 1.0.0-SNAPSHOT
 
 jobs:
   build-and-push:

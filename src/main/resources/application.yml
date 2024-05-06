@@ -1,3 +1,17 @@
+### Server / API
+server:
+  port: 8080
+  error:
+    include-message: always
+
+### Spring
+management:
+  endpoints:
+    web.exposure.include: health,info
+  info:
+    git.enabled: false
+
+### Prometheus
 prometheus:
-    host: "localhost"
-    port: 9090
+  host: "localhost"
+  port: 9090

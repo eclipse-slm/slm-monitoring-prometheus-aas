@@ -1,4 +1,4 @@
-package de.fhg.ipa.ced.monitoring.prometheus;
+package org.eclipse.slm.monitoring.prometheus.aas.query;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
