@@ -27,7 +27,7 @@ public class PlatformResourcesSubmodel extends DefaultSubmodel {
     }
 
     public void setOS(String os) {
-        Property osProp = new DefaultProperty.Builder()
+        var osProp = new DefaultProperty.Builder()
                 .idShort(OSID)
                 .value(os)
                 .build();
@@ -39,7 +39,7 @@ public class PlatformResourcesSubmodel extends DefaultSubmodel {
     }
 
     public void setProArc(String proArc) {
-        Property proArcProp = new DefaultProperty.Builder()
+        var proArcProp = new DefaultProperty.Builder()
                 .idShort(PROARCID)
                 .value(proArc)
                 .build();
@@ -52,7 +52,7 @@ public class PlatformResourcesSubmodel extends DefaultSubmodel {
     }
 
     public void setMemTotal(float memTotalKB) {
-        Property memTotalKBProp = new DefaultProperty.Builder()
+        var memTotalKBProp = new DefaultProperty.Builder()
                 .idShort(MEMTOTALID)
                 .value(String.valueOf(memTotalKB))
                 .build();
@@ -64,7 +64,7 @@ public class PlatformResourcesSubmodel extends DefaultSubmodel {
     }
 
     public void setAllocatedMemory(float allocatedMemory) {
-        Property allocatedMemoryProp = new DefaultProperty.Builder()
+        var allocatedMemoryProp = new DefaultProperty.Builder()
                 .idShort(ALLOCATEDMEMORYID)
                 .value(String.valueOf(allocatedMemory))
                 .build();
@@ -76,7 +76,7 @@ public class PlatformResourcesSubmodel extends DefaultSubmodel {
     }
 
     public void setAllocatedMemoryHistogram(String jsonArray) {
-        Property allocatedMemory = new DefaultProperty.Builder()
+        var allocatedMemory = new DefaultProperty.Builder()
                 .idShort(ALLOCATEDMEMORYHISTOGRAMID)
                 .value(jsonArray)
                 .build();
@@ -88,7 +88,7 @@ public class PlatformResourcesSubmodel extends DefaultSubmodel {
     }
 
     public void setCPULoad(float cpuLoad) {
-        Property cpuLoadProp = new DefaultProperty.Builder()
+        var cpuLoadProp = new DefaultProperty.Builder()
                 .idShort(CPULOADID)
                 .value(String.valueOf(cpuLoad))
                 .build();
@@ -100,7 +100,7 @@ public class PlatformResourcesSubmodel extends DefaultSubmodel {
     }
 
     public void setCPULoadHistogram(String jsonArray) {
-        Property cpuLoadHistogramProp = new DefaultProperty.Builder()
+        var cpuLoadHistogramProp = new DefaultProperty.Builder()
                 .idShort(CPULOADHISTOGRAMID)
                 .value(jsonArray)
                 .build();
