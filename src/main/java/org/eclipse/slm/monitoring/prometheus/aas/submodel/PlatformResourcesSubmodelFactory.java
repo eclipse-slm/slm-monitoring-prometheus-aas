@@ -43,7 +43,7 @@ public class PlatformResourcesSubmodelFactory {
             var result = restTemplate.getForObject(queryUrl, VectorResult.class);
 
             if (result.data().result().size() == 0) {
-                throw new SubmodelNotFoundException(resourceId);
+                return submodel;
             }
 
             float memTotalBytes = 1;
