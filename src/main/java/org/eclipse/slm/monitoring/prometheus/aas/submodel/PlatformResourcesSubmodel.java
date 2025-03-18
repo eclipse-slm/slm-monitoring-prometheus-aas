@@ -19,7 +19,7 @@ public class PlatformResourcesSubmodel extends DefaultSubmodel {
     public static final Reference SEMANTIC_ID = new DefaultReference.Builder().keys(
                     new DefaultKey.Builder()
                             .type(KeyTypes.CONCEPT_DESCRIPTION)
-                            .value("https://eclipse.dev/slm/conceptDescriptions/PlattformResources").build()).build();
+                            .value("https://eclipse.dev/slm/aas/sm/PlattformResources").build()).build();
 
     public PlatformResourcesSubmodel(String id) {
         this.setId(id);
