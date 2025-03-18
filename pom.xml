@@ -18,7 +18,7 @@
 		<maven.plugin.spring.boot.version>${spring.boot.version}</maven.plugin.spring.boot.version>
 
 		<spring.boot.version>3.3.3</spring.boot.version>
-		<basyx.version>2.0.0-SNAPSHOT</basyx.version>
+		<basyx.version>2.0.0-milestone-05</basyx.version>
 		<springdoc.version>2.5.0</springdoc.version>
 	</properties>
 

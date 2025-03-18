@@ -109,6 +109,11 @@ public class PlatformResourcesSubmodelService implements SubmodelService {
 	}
 
 	@Override
+	public InputStream getFileByFilePath(String filePath) {
+		throw new MethodNotImplementedException();
+	}
+
+	@Override
 	public void patchSubmodelElements(List<SubmodelElement> submodelElementList) {
 		throw new MethodNotImplementedException();
 	}
