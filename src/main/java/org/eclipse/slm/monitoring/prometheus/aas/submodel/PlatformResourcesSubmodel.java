@@ -15,7 +15,7 @@ public class PlatformResourcesSubmodel extends DefaultSubmodel {
     public static final String ALLOCATEDMEMORYHISTOGRAMID = "AllocatedMemoryHistogramm";
     public static final String CPULOADID = "CPULoad";
     public static final String CPULOADHISTOGRAMID = "CPULoadHistogram";
-    public static final String SUBMODEL_ID = "PlatformResources";
+    public static final String SUBMODEL_ID_SHORT = "PlatformResources";
     public static final Reference SEMANTIC_ID = new DefaultReference.Builder().keys(
                     new DefaultKey.Builder()
                             .type(KeyTypes.CONCEPT_DESCRIPTION)
@@ -23,7 +23,8 @@ public class PlatformResourcesSubmodel extends DefaultSubmodel {
 
     public PlatformResourcesSubmodel(String id) {
         this.setId(id);
-        this.setIdShort(id);
+        this.setIdShort(SUBMODEL_ID_SHORT);
+        this.setSemanticId(SEMANTIC_ID);
     }
 
     public void setOS(String os) {
