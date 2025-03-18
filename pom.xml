@@ -6,7 +6,6 @@
 	<groupId>org.eclipse.slm</groupId>
 	<artifactId>slm-monitoring-prometheus-aas</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
-	<name>monitoring.prometheus</name>
 	<description>Prometheus AAS API for Eclipse SLM</description>
 
 	<properties>
@@ -19,7 +18,7 @@
 
 		<spring.boot.version>3.4.3</spring.boot.version>
 		<basyx.version>2.0.0-milestone-05</basyx.version>
-		<springdoc.version>2.5.0</springdoc.version>
+		<springdoc.version>2.8.5</springdoc.version>
 	</properties>
 
 	<repositories>
