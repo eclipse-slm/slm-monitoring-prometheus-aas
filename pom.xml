@@ -17,7 +17,8 @@
 		<maven.plugin.spring.boot.version>${spring.boot.version}</maven.plugin.spring.boot.version>
 		<maven.plugin.dockerfile.version>1.4.10</maven.plugin.dockerfile.version>
 
-		<spring.boot.version>3.4.3</spring.boot.version>
+		<spring.boot.version>3.4.4</spring.boot.version>
+		<spring-cloud.version>2024.0.1</spring-cloud.version>
 		<basyx.version>2.0.0-milestone-05</basyx.version>
 		<springdoc.version>2.8.5</springdoc.version>
 
@@ -40,6 +41,26 @@
 		</repository>
 	</repositories>
 
+	<dependencyManagement>
+		<dependencies>
+			<!-- Spring -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${spring.boot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
 	<dependencies>
 		<!-- Spring !-->
 		<dependency>
@@ -51,6 +72,10 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 			<version>${spring.boot.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-consul-discovery</artifactId>
 		</dependency>
 
 		<!-- OpenAPI !-->

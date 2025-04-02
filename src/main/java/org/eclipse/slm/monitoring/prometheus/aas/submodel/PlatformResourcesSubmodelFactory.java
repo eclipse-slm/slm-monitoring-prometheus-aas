@@ -43,6 +43,7 @@ public class PlatformResourcesSubmodelFactory {
             var result = restTemplate.getForObject(queryUrl, VectorResult.class);
 
             if (result.data().result().size() == 0) {
+                LOG.info("No prometheus metrics found for resource '{}', returning empty submodel: ", resourceId);
                 return submodel;
             }
 
