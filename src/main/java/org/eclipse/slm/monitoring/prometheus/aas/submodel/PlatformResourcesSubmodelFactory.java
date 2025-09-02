@@ -17,6 +17,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @Component
 public class PlatformResourcesSubmodelFactory {
@@ -69,7 +70,8 @@ public class PlatformResourcesSubmodelFactory {
                     float availableMemoryBytes = Float.parseFloat((String) value.get(1));
                     allocatedMemoryHistogram.add((1 - availableMemoryBytes / memTotalBytes) * 100);
                 }
-                submodel.setAllocatedMemoryHistogram(objectMapper.writeValueAsString(allocatedMemoryHistogram));
+                var graphDefinition = Map.of("AllocatedMemory", allocatedMemoryHistogram);
+                submodel.setAllocatedMemoryHistogram(objectMapper.writeValueAsString(graphDefinition));
                 submodel.setAllocatedMemory(allocatedMemoryHistogram.get(allocatedMemoryHistogram.size() - 1));
             }
 
@@ -82,7 +84,8 @@ public class PlatformResourcesSubmodelFactory {
                     float utilizedCPU = Float.parseFloat((String) value.get(1));
                     utilizedCPUHistogram.add(utilizedCPU);
                 }
-                submodel.setCPULoadHistogram(objectMapper.writeValueAsString(utilizedCPUHistogram));
+                var graphDefinition = Map.of("CPULoad", utilizedCPUHistogram);
+                submodel.setCPULoadHistogram(objectMapper.writeValueAsString(graphDefinition));
                 submodel.setCPULoad(utilizedCPUHistogram.get(utilizedCPUHistogram.size() - 1));
             }
 
