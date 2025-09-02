@@ -82,6 +82,7 @@ public class PlatformResourcesSubmodel extends DefaultSubmodel {
         var allocatedMemory = new DefaultProperty.Builder()
                 .idShort(ALLOCATEDMEMORYHISTOGRAMID)
                 .value(jsonArray)
+                .valueType(DataTypeDefXsd.STRING)
                 .build();
         allocatedMemory.setSemanticId(new DefaultReference.Builder()
                                         .type(ReferenceTypes.EXTERNAL_REFERENCE)
@@ -97,6 +98,7 @@ public class PlatformResourcesSubmodel extends DefaultSubmodel {
         var cpuLoadProp = new DefaultProperty.Builder()
                 .idShort(CPULOADID)
                 .value(String.valueOf(cpuLoad))
+                .valueType(DataTypeDefXsd.STRING)
                 .build();
         cpuLoadProp.setSemanticId(new DefaultReference.Builder().keys(new DefaultKey.Builder()
                                     .type(KeyTypes.CONCEPT_DESCRIPTION)
