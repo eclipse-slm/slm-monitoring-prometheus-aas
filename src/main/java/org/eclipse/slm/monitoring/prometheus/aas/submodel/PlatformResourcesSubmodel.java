@@ -86,7 +86,7 @@ public class PlatformResourcesSubmodel extends DefaultSubmodel {
         allocatedMemory.setSemanticId(new DefaultReference.Builder()
                                         .type(ReferenceTypes.EXTERNAL_REFERENCE)
                                         .keys(new DefaultKey.Builder()
-                                            .type(KeyTypes.PROPERTY)
+                                            .type(KeyTypes.GLOBAL_REFERENCE)
                                             .value("http://iese.fraunhofer.de/prop_jsonarray").build()
                                         ).build());
 
@@ -113,7 +113,7 @@ public class PlatformResourcesSubmodel extends DefaultSubmodel {
         cpuLoadHistogramProp.setSemanticId(new DefaultReference.Builder()
                                             .type(ReferenceTypes.EXTERNAL_REFERENCE)
                                             .keys(new DefaultKey.Builder()
-                                                    .type(KeyTypes.PROPERTY)
+                                                    .type(KeyTypes.GLOBAL_REFERENCE)
                                                     .value("http://iese.fraunhofer.de/prop_jsonarray").build()
                                             ).build());
 
