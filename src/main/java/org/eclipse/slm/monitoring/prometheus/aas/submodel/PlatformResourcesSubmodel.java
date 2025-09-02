@@ -16,10 +16,12 @@ public class PlatformResourcesSubmodel extends DefaultSubmodel {
     public static final String CPULOADID = "CPULoad";
     public static final String CPULOADHISTOGRAMID = "CPULoadHistogram";
     public static final String SUBMODEL_ID_SHORT = "PlatformResources";
-    public static final Reference SEMANTIC_ID = new DefaultReference.Builder().keys(
-                    new DefaultKey.Builder()
-                            .type(KeyTypes.CONCEPT_DESCRIPTION)
-                            .value("https://eclipse.dev/slm/aas/sm/PlatformResources").build()).build();
+    public static final Reference SEMANTIC_ID = new DefaultReference.Builder()
+            .type(ReferenceTypes.EXTERNAL_REFERENCE)
+            .keys(new DefaultKey.Builder()
+                        .type(KeyTypes.PROPERTY)
+                        .value("https://eclipse.dev/slm/aas/sm/PlatformResources").build()
+            ).build();
 
     public PlatformResourcesSubmodel(String id) {
         this.setId(id);
