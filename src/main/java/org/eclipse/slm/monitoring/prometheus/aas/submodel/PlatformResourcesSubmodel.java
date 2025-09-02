@@ -19,7 +19,7 @@ public class PlatformResourcesSubmodel extends DefaultSubmodel {
     public static final Reference SEMANTIC_ID = new DefaultReference.Builder()
             .type(ReferenceTypes.EXTERNAL_REFERENCE)
             .keys(new DefaultKey.Builder()
-                        .type(KeyTypes.PROPERTY)
+                        .type(KeyTypes.SUBMODEL)
                         .value("https://eclipse.dev/slm/aas/sm/PlatformResources").build()
             ).build();
 
@@ -83,9 +83,12 @@ public class PlatformResourcesSubmodel extends DefaultSubmodel {
                 .idShort(ALLOCATEDMEMORYHISTOGRAMID)
                 .value(jsonArray)
                 .build();
-        allocatedMemory.setSemanticId(new DefaultReference.Builder().keys(new DefaultKey.Builder()
-                                        .type(KeyTypes.CONCEPT_DESCRIPTION)
-                                        .value("http://iese.fraunhofer.de/prop_jsonarray").build()).build());
+        allocatedMemory.setSemanticId(new DefaultReference.Builder()
+                                        .type(ReferenceTypes.EXTERNAL_REFERENCE)
+                                        .keys(new DefaultKey.Builder()
+                                            .type(KeyTypes.PROPERTY)
+                                            .value("http://iese.fraunhofer.de/prop_jsonarray").build()
+                                        ).build());
 
         this.submodelElements.add(allocatedMemory);
     }
@@ -107,9 +110,12 @@ public class PlatformResourcesSubmodel extends DefaultSubmodel {
                 .idShort(CPULOADHISTOGRAMID)
                 .value(jsonArray)
                 .build();
-        cpuLoadHistogramProp.setSemanticId(new DefaultReference.Builder().keys(new DefaultKey.Builder()
-                                            .type(KeyTypes.CONCEPT_DESCRIPTION)
-                                            .value("http://iese.fraunhofer.de/prop_jsonarray").build()).build());
+        cpuLoadHistogramProp.setSemanticId(new DefaultReference.Builder()
+                                            .type(ReferenceTypes.EXTERNAL_REFERENCE)
+                                            .keys(new DefaultKey.Builder()
+                                                    .type(KeyTypes.PROPERTY)
+                                                    .value("http://iese.fraunhofer.de/prop_jsonarray").build()
+                                            ).build());
 
         this.submodelElements.add(cpuLoadHistogramProp);
     }
