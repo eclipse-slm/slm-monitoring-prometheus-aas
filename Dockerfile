@@ -1,5 +1,5 @@
 FROM openjdk:18.0.2.1-jdk-slim-buster
-MAINTAINER Tim Sokollek (tim.sokollek@ipa.fraunhofer.de)
+MAINTAINER Matthias Schneider (matthias.schneider@ipa.fraunhofer.de)
 
 ENV PROMETHEUS_HOST="prometheus" \
     PROMETHEUS_PORT=9090
