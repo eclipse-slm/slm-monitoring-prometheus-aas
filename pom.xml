@@ -21,7 +21,6 @@
 		<spring.boot.version>4.1.1</spring.boot.version>
 		<spring-cloud.version>2025.1.2</spring-cloud.version>
 		<basyx.version>2.0.0-milestone-15</basyx.version>
-		<aas4j.version>2.0.2</aas4j.version>
 		<springdoc.version>2.8.5</springdoc.version>
 
 		<docker.image.skip>false</docker.image.skip>
