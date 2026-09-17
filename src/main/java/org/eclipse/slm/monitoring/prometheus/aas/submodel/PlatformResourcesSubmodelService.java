@@ -99,7 +99,7 @@ public class PlatformResourcesSubmodelService implements SubmodelService {
 	}
 
 	@Override
-	public void setFileValue(String idShortPath, String fileName, InputStream inputStream) throws ElementDoesNotExistException, ElementNotAFileException {
+	public void setFileValue(String idShortPath, String fileName, String contentType, InputStream inputStream) throws ElementDoesNotExistException, ElementNotAFileException {
 		throw new MethodNotImplementedException();
 	}
 
