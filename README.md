@@ -36,6 +36,6 @@ The application can be configured via `application.properties` or `application.y
 
 ## License
 
-SPDX-License-Identifier: MIT
+SPDX-License-Identifier: Apache-2.0
 
-Eclipse Public License - v 2.0: https://www.eclipse.org/legal/epl-2.0/
+Licensed under the Apache License, Version 2.0: https://www.apache.org/licenses/LICENSE-2.0
