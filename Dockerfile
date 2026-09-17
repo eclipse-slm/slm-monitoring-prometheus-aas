@@ -1,4 +1,4 @@
-FROM openjdk:21-jdk
+FROM eclipse-temurin:21-jdk
 MAINTAINER Matthias Schneider (matthias.schneider@ipa.fraunhofer.de)
 
 ENV PROMETHEUS_HOST="prometheus" \
