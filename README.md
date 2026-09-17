@@ -15,8 +15,9 @@ This project exposes Prometheus monitoring metrics through an AAS (Asset Adminis
 
 ## Technology Stack
 
-- **Java 18+**
-- **Spring Boot 3.x**
+- **Java 21**
+- **Spring Boot 4.1.x**
+- **Spring Cloud 2025.1.x**
 - **Eclipse BaSyx** (Submodel Repository)
 - **aas4j** for AAS model handling
 
